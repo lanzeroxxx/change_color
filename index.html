@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        body {
+            background-color: rgb(86, 115, 179);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+
+        #colorBox {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            margin: 20px;
+        }
+
+        #changeColorBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }button{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript<br>colorChanger()<br>Hands-On</h1>
+
+    <button id="changeColorBtn">Click Me</button>
+    <div id="colorBox"></div>
+
+    <script>
+        // Get references to the button and the color box
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        const colorBox = document.getElementById('colorBox');
+
+        // Add an event listener to the button
+        changeColorBtn.addEventListener('click', function() {
+            // Check the current color of the box
+            if (colorBox.style.backgroundColor === 'green') {
+                // Change the color to blue if it's currently green
+                colorBox.style.backgroundColor = 'blue';
+            } else {
+                // Change the color to green if it's currently blue
+                colorBox.style.backgroundColor = 'green';
+            }
+        });
+    </script>
+
+</body>
+</html>
